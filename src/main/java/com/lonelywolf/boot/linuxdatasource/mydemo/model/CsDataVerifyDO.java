@@ -1,6 +1,7 @@
 package com.lonelywolf.boot.linuxdatasource.mydemo.model;
 
 import com.alibaba.fastjson.annotation.JSONField;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
@@ -11,6 +12,7 @@ import lombok.Data;
  */
 @Data
 public class CsDataVerifyDO {
+    @ApiModelProperty(name = "commodityName",value = "名称")
     @JSONField(name = "commodity_name")
     private String commodityName;
 

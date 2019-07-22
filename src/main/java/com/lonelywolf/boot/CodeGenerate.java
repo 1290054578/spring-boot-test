@@ -1,4 +1,4 @@
-package com.lonelywolf.boot.linuxdatasource.mydemo;
+package com.lonelywolf.boot;
 
 import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;

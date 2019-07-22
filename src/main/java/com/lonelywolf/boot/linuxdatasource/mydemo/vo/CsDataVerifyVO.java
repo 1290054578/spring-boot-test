@@ -1,7 +1,10 @@
 package com.lonelywolf.boot.linuxdatasource.mydemo.vo;
 
 import com.alibaba.fastjson.annotation.JSONField;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+
+import javax.validation.constraints.NotNull;
 
 /**
  * 业务入参对象
@@ -11,6 +14,8 @@ import lombok.Data;
  */
 @Data
 public class CsDataVerifyVO {
+    @ApiModelProperty(value = "名称" , required = true)
+    @NotNull
     @JSONField(name = "commodity_name")
     private String commodityName;
 

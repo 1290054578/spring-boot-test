@@ -26,6 +26,12 @@ public class CsDataVerifyServiceImpl extends ServiceImpl<CsDataVerifyMapper, CsD
 
     @Override
     public List<CsDataVerify> queryAll(CsDataVerify csDataVerify) {
-        return csDataVerifyMapper.queryAllInfo(csDataVerify);
+        List<CsDataVerify> list = null;
+        try{
+           list = csDataVerifyMapper.queryAllInfo(csDataVerify);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return list;
     }
 }
