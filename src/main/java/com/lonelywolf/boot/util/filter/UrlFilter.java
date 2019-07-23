@@ -1,9 +1,7 @@
-package com.lonelywolf.boot.util;
-
+package com.lonelywolf.boot.util.filter;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
-import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 /**
@@ -16,24 +14,25 @@ public class UrlFilter implements Filter {
 
         @Override
         public void init(FilterConfig filterConfig) {
+
+            //过滤器初始化
             System.out.println("----------------------->过滤器被创建");
+
         }
 
         @Override
         public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+            //设置请求、响应编码格式
+            servletRequest.setCharacterEncoding("UTF-8");
+            servletResponse.setCharacterEncoding("UTF-8");
 
-            HttpServletRequest req = (HttpServletRequest) servletRequest;
-            String requestURI = req.getRequestURI();
-            System.out.println("--------------------->过滤器：请求地址"+requestURI);
-            if(!requestURI.contains("info")){
-                servletRequest.getRequestDispatcher("/failed").forward(servletRequest, servletResponse);
-            }else{
-                filterChain.doFilter(servletRequest, servletResponse);
-            }
+
+            filterChain.doFilter(servletRequest, servletResponse);
         }
 
         @Override
         public void destroy() {
+            //过滤器销毁
             System.out.println("----------------------->过滤器被销毁");
         }
 }
