@@ -15,7 +15,7 @@ import java.util.Scanner;
 /**
  * @Author: Xiangyong.zeng
  * @Date: 2019-07-19 13:55
- * @Description:
+ * @Description: mybatis-puls代码生成器
  */
 public class CodeGenerate {
     /**
@@ -54,7 +54,7 @@ public class CodeGenerate {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://127.0.0.1:3306/demo?useUnicode=true&useSSL=false&characterEncoding=utf8");
+        dsc.setUrl("jdbc:mysql://127.0.0.1:3306/mytest?useUnicode=true&useSSL=false&characterEncoding=utf8");
         // dsc.setSchemaName("public");
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUsername("mytest");
@@ -65,7 +65,7 @@ public class CodeGenerate {
         PackageConfig pc = new PackageConfig();
 //        pc.setModuleName(scanner("test_user"));
         pc.setModuleName("");
-        pc.setParent("com.lonelywolf.boot.linuxdatasoucrce.mybatisplus");
+        pc.setParent("com.lonelywolf.boot.localdatasource.mydemo");
         mpg.setPackageInfo(pc);
 
         // 自定义配置
@@ -117,7 +117,7 @@ public class CodeGenerate {
         strategy.setRestControllerStyle(true);
 //        strategy.setSuperControllerClass("com.xcxd.data.manage.core.base.BaseController");
 //        strategy.setInclude(scanner("test_user")
-        strategy.setInclude("cs_data_verify"
+        strategy.setInclude("test_user"
                 .split(","));
 //        strategy.setSuperEntityColumns("id");
         strategy.setControllerMappingHyphenStyle(true);

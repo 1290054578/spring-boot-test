@@ -1,4 +1,4 @@
-package com.lonelywolf.boot.util.filter;
+package com.lonelywolf.boot.common.filter;
 
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * @Author: Xiangyong.zeng
  * @Date: 2019-07-23 10:15
- * @Description:
+ * @Description: 过滤器注入类
  */
 @Configuration
 public class FilterConfigBean {

@@ -1,4 +1,4 @@
-package com.lonelywolf.boot.util.filter;
+package com.lonelywolf.boot.common.filter;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -7,7 +7,7 @@ import java.io.IOException;
 /**
  * @Author: Xiangyong.zeng
  * @Date: 2019-07-22 18:23
- * @Description:
+ * @Description: 过滤器
  */
 @WebFilter(filterName = "过滤器",urlPatterns = "/*")
 public class UrlFilter implements Filter {

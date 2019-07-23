@@ -1,6 +1,7 @@
 package com.lonelywolf.boot.linuxdatasource.mydemo.service.impl;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.lonelywolf.boot.linuxdatasource.mydemo.entity.CsDataVerify;
 import com.lonelywolf.boot.linuxdatasource.mydemo.mapper.CsDataVerifyMapper;
@@ -33,5 +34,11 @@ public class CsDataVerifyServiceImpl extends ServiceImpl<CsDataVerifyMapper, CsD
             e.printStackTrace();
         }
         return list;
+    }
+
+
+    @Override
+    public List<CsDataVerify> queryByBaseMapper(CsDataVerify csDataVerify) {
+        return this.baseMapper.selectList(new LambdaQueryWrapper<CsDataVerify>());
     }
 }

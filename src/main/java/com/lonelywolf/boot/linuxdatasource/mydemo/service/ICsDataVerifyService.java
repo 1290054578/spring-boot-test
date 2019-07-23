@@ -15,4 +15,6 @@ import java.util.List;
  */
 public interface ICsDataVerifyService extends IService<CsDataVerify> {
     List<CsDataVerify> queryAll(CsDataVerify csDataVerify);
+
+    List<CsDataVerify> queryByBaseMapper(CsDataVerify csDataVerify);
 }

@@ -2,7 +2,6 @@ package com.lonelywolf.boot.linuxdatasource.mydemo.controller;
 
 
 import com.lonelywolf.boot.linuxdatasource.mydemo.entity.CsDataVerify;
-import com.lonelywolf.boot.linuxdatasource.mydemo.model.CsDataVerifyDO;
 import com.lonelywolf.boot.linuxdatasource.mydemo.service.ICsDataVerifyService;
 import com.lonelywolf.boot.linuxdatasource.mydemo.vo.CsDataVerifyVO;
 import io.swagger.annotations.Api;
@@ -22,7 +21,7 @@ import java.util.List;
  * @since 2019-07-19
  */
 @RestController
-@RequestMapping("/datatest/verify/")
+@RequestMapping("/data/primary/source")
 @Api(description = "swagger测试rest接口用例")
 public class CsDataVerifyController {
 
@@ -38,9 +37,9 @@ public class CsDataVerifyController {
 
     @ApiOperation(value = "rest规范接口",notes = "rest规范接口描述")
     @GetMapping("/test")
-    public List<CsDataVerifyDO> queryAll(@Valid String id){
+    public List<CsDataVerify> queryAll(@Valid String id){
         CsDataVerify csDataVerify = new CsDataVerify();
-        return null;
+        return iCsDataVerifyService.queryByBaseMapper(null);
     }
 
 }
