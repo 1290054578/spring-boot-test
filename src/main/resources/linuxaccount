@@ -1,0 +1,18 @@
+########### 阿里云服务器信息 Linux安装应用及安装路径，初始化信息 ——开始—— ####################
+
+#阿里云 47.102.139.58
+
+#Nginx
+#address:usr/local/nginx
+
+#Mysql
+#address:find / -name mysql(搜索)
+#username:root
+#password:123456
+
+#Redis
+#address:usr/local/redis
+#startorder:/usr/local/redis/bin/redis-server /usr/local/redis/etc/redis.conf
+
+
+########### 阿里云服务器信息 Linux安装应用及安装路径，初始化信息  ——结束——  ####################
