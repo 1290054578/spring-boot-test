@@ -33,6 +33,7 @@ public class SecondaryDatasourceConfig {
 
     @Bean(name = "secondarySqlSessionFactory")
     public SqlSessionFactory secondarySqlSessionFactory(@Qualifier("secondaryDataSource") DataSource dataSource) throws Exception {
+        //SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         MybatisSqlSessionFactoryBean bean = new MybatisSqlSessionFactoryBean();
         bean.setDataSource(dataSource);
         //读取mybatis xml文件位置
