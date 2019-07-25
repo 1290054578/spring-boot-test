@@ -18,5 +18,12 @@
 
 
 
+使用nohup启动，可以避免关闭xshell后程序中断
+例：nohup java -jar XXXX &
+nohup启动可以指定nohup.out输出位置
+
+
+访问地址：http://47.102.139.58:8080/swagger-ui.html
+
 
 ########### 阿里云服务器信息 Linux安装应用及安装路径，初始化信息  ——结束——  ####################
