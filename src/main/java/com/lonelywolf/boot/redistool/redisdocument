@@ -1,0 +1,9 @@
+#######
+RedisTemplate用法详解
+https://blog.csdn.net/weixin_40461281/article/details/82011670
+
+StringRedisTemplate操作redis数据
+https://www.cnblogs.com/slowcity/p/9002660.html
+
+中使用RedisTemplate操作Redis（spring-data-redis）
+https://www.cnblogs.com/songanwei/p/9274348.html
