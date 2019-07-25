@@ -4,15 +4,19 @@
 
 #Nginx
 #address:usr/local/nginx
+#startorder:usr/local/nginx
 
 #Mysql
 #address:find / -name mysql(搜索)
 #username:root
 #password:123456
+#startorder:systemctl start mysqld
 
 #Redis
 #address:usr/local/redis
 #startorder:/usr/local/redis/bin/redis-server /usr/local/redis/etc/redis.conf
+
+
 
 
 ########### 阿里云服务器信息 Linux安装应用及安装路径，初始化信息  ——结束——  ####################

@@ -20,3 +20,14 @@ Linux常用指令
     ps aux | grep program_filter_word,ps -ef |grep tomcat
 
 ps -ef|grep java|grep -v grep 显示出所有的java进程，去处掉当前的grep进程。
+
+
+
+[root@localhost ~]# systemctl restart iptables.service #重启防火墙使配置生效
+[root@localhost ~]# systemctl enable iptables.service #设置防火墙开机启动
+[root@localhost ~]# systemctl disable iptables.service #禁止防火墙开机启动
+
+
+#查看修改端口，iptable
+查看时通过 cat  /etc/sysconfig/iptables 命令查看
+通过vim  /etc/sysconfig/iptables
