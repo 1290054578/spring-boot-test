@@ -86,4 +86,32 @@ public class SwaggerConfig {
                 .version("1.0")
                 .build();
     }
+
+    @Bean
+    public Docket redisApiInfo() {
+        List<Parameter> operationParameters = new ArrayList<>();
+
+        return new Docket(DocumentationType.SWAGGER_2)
+                .groupName("redis测试API")
+                .genericModelSubstitutes(DeferredResult.class)
+//              .genericModelSubstitutes(ResponseEntity.class)
+                .useDefaultResponseMessages(false)
+                .forCodeGeneration(false)
+                .pathMapping("/")
+                .select()
+                //配置的接口
+                .paths(or(regex("/redis/operation/.*")))
+                .build()
+                .globalOperationParameters(operationParameters)
+                .apiInfo(redisInfo());
+    }
+
+    private ApiInfo redisInfo() {
+        return new ApiInfoBuilder()
+                .title("redis测试接口")
+//                .termsOfServiceUrl("https://XXXXXXX/openapi/")
+                .description("redis测试示例")
+                .version("1.0")
+                .build();
+    }
 }
