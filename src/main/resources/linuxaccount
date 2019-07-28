@@ -1,10 +1,24 @@
 ########### 阿里云服务器信息 Linux安装应用及安装路径，初始化信息 ——开始—— ####################
 
 #阿里云 47.102.139.58
-
+----------------------------------------------------
 #Nginx
 #address:usr/local/nginx
-#startorder:usr/local/nginx
+#startorder:/usr/local/nginx/sbin/nginx
+
+Nginx代理配置
+    server {
+        listen       8089;
+        server_name   47.102.139.58;
+
+        location / {
+             proxy_pass http://47.102.139.58:80;
+        }
+    }
+
+监听8089端口，代理访问80端口
+
+----------------------------------------------------
 
 #Mysql
 #address:find / -name mysql(搜索)
@@ -12,16 +26,19 @@
 #password:123456
 #startorder:systemctl start mysqld
 
+----------------------------------------------------
+
 #Redis
 #address:usr/local/redis
 #startorder:/usr/local/redis/bin/redis-server /usr/local/redis/etc/redis.conf
 
-
+----------------------------------------------------
 
 使用nohup启动，可以避免关闭xshell后程序中断
 例：nohup java -jar XXXX &
 nohup启动可以指定nohup.out输出位置
 
+----------------------------------------------------
 
 访问地址：http://47.102.139.58:8080/swagger-ui.html
 
