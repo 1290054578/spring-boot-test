@@ -114,4 +114,32 @@ public class SwaggerConfig {
                 .version("1.0")
                 .build();
     }
+
+    @Bean
+    public Docket adaptiveApiInfo() {
+        List<Parameter> operationParameters = new ArrayList<>();
+
+        return new Docket(DocumentationType.SWAGGER_2)
+                .groupName("适配器测试API")
+                .genericModelSubstitutes(DeferredResult.class)
+//              .genericModelSubstitutes(ResponseEntity.class)
+                .useDefaultResponseMessages(false)
+                .forCodeGeneration(false)
+                .pathMapping("/")
+                .select()
+                //配置的接口
+                .paths(or(regex("/adaptive/operation/.*")))
+                .build()
+                .globalOperationParameters(operationParameters)
+                .apiInfo(adaotiveInfo());
+    }
+
+    private ApiInfo adaotiveInfo() {
+        return new ApiInfoBuilder()
+                .title("适配器测试接口")
+//                .termsOfServiceUrl("https://XXXXXXX/openapi/")
+                .description("redis测试示例")
+                .version("1.0")
+                .build();
+    }
 }
