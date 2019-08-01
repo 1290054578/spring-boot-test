@@ -23,12 +23,14 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+
+    <!-- spring-boot web操作依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!--数据库驱动-->
+    <!--数据库驱动-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -40,16 +42,16 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.47</version>
         </dependency>
-        <!--数据库驱动-->
+    <!--数据库驱动-->
 
-        <!-- Spring-boot测试依赖 -->
+    <!-- Spring-boot测试依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
 
-        <!-- Mybatis-puls依赖 开始-->
+    <!-- Mybatis-puls依赖 开始-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
@@ -78,9 +80,9 @@
             <version>1.18.4</version>
             <scope>provided</scope>
         </dependency>
-        <!-- Mybatis-puls依赖  结束-->
+    <!-- Mybatis-puls依赖  结束-->
 
-        <!--引入swagger -->
+    <!--引入swagger -->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
@@ -91,16 +93,16 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>2.2.2</version>
         </dependency>
-        <!--引入swagger -->
+    <!--引入swagger -->
 
-        <!-- fastJson依赖 -->
+    <!-- fastJson依赖 -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.56</version>
         </dependency>
 
-        <!-- redis依赖 -->
+    <!-- redis依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
@@ -119,7 +121,7 @@
 
         <resources>
             <resource>
-                <!-- xml放在java目录下-->
+            <!-- xml放在java目录下-->
                 <directory>src/main/java</directory>
                 <includes>
                     <include>**/*.xml</include>
