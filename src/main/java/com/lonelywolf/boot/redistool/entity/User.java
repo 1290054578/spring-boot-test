@@ -10,6 +10,11 @@ import lombok.Data;
 @Data
 public class User {
 
+    public User(Integer id,String name){
+        this.id = id;
+        this.username = name;
+    }
+
     private Integer id;
     private String username;
     private String password;

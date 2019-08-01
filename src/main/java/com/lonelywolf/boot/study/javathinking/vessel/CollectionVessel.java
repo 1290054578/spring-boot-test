@@ -1,4 +1,4 @@
-package com.lonelywolf.boot.javathinking.vessel;
+package com.lonelywolf.boot.study.javathinking.vessel;
 
 
 
