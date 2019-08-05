@@ -9,3 +9,8 @@ datasource:
     jdbc-url: jdbc:mysql://127.0.0.1:3306/mytest?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false&rewriteBatchedStatements=true
     username: mytest
     password: mytest123
+
+# 配置slq打印日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

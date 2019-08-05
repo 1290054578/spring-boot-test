@@ -1,7 +1,9 @@
 package com.lonelywolf.boot.localdatasource.mydemo.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.lonelywolf.boot.localdatasource.mydemo.entity.TestUser;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.lonelywolf.boot.localdatasource.mydemo.vo.TestUserVO;
 
 import java.util.List;
 
@@ -16,4 +18,6 @@ import java.util.List;
 public interface ITestUserService extends IService<TestUser> {
     List<TestUser> queryAllUser(TestUser testUser);
 
+
+    IPage<TestUser> queryUserByPage(TestUserVO testUserVO);
 }

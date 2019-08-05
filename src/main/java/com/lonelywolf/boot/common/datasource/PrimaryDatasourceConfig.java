@@ -1,5 +1,6 @@
 package com.lonelywolf.boot.common.datasource;
 
+import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -40,8 +41,8 @@ public class PrimaryDatasourceConfig {
     @Bean(name = "primarySqlSessionFactory")
     @Primary
     public SqlSessionFactory primarySqlSessionFactory(@Qualifier("primaryDataSource") DataSource dataSource) throws Exception {
-        //使用MybatisSqlSessionFactoryBean，mybatis puls自带的basemapper才能使用
-        SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
+        //使用MybatisSqlSessionFactoryBean，mybatis puls自带的basemapper才能使用  SqlSessionFactoryBean
+        MybatisSqlSessionFactoryBean bean = new MybatisSqlSessionFactoryBean();
         bean.setDataSource(dataSource);
         //读取mybatis xml文件位置
         bean.setMapperLocations(new PathMatchingResourcePatternResolver()
@@ -60,4 +61,5 @@ public class PrimaryDatasourceConfig {
     public SqlSessionTemplate primarySqlSessionTemplate(@Qualifier("primarySqlSessionFactory") SqlSessionFactory sqlSessionFactory) {
         return new SqlSessionTemplate(sqlSessionFactory);
     }
+
 }

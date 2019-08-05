@@ -7,4 +7,9 @@
         select  * from test_user
     </select>
 
+    <select id="queryUserByPage" parameterType="com.lonelywolf.boot.localdatasource.mydemo.vo.TestUserVO"
+            resultType="com.lonelywolf.boot.localdatasource.mydemo.model.UserDO">
+        select  * from test_user
+    </select>
+
 </mapper>
